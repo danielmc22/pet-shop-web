@@ -11,7 +11,7 @@ function menus(){
         nav.classList.remove("nav2");
         nav.className=("nav1"); 
         nav.style.transition ="1s";
-        menu.style.top ="80px";
+        menu.style.top ="120px";
         abrir.style.color="#fff";
     }else{
         nav.classList.remove("nav1");
@@ -24,7 +24,7 @@ function menus(){
 
 function apertura(){
     if (cerrado) {
-        menu.style.width="70vw";
+        menu.style.width="50vw";
         cerrado = false;
     }else{
         menu.style.width="0%";
@@ -32,7 +32,7 @@ function apertura(){
         cerrado=true;
     }
 }
- 
+
 window.addEventListener("load",function(){
     $("#onload").fadeOut();
     $("body").removeClass("hidden");

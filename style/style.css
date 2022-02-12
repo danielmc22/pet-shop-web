@@ -347,7 +347,7 @@ footer p{margin-top: var(--espacios);}
   }
   .enlaces{
     position: fixed;
-    top: 80px;
+    top: 120px;
     background: #2c3e50;
     left: 0;
     height: 100vh;
@@ -365,7 +365,7 @@ footer p{margin-top: var(--espacios);}
     text-align: center;
     background: #34495e;
     color: #fff;
-    margin: 0px 10px;
+    /* margin: 0px 10px; */
   }
 
   .textos>h1{font-size: 70px;}
