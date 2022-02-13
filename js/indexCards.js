@@ -1,6 +1,8 @@
 const API = 'https://apipetshop.herokuapp.com/api/articulos';
 let fetchedData;
 let productos;
+let juguetes = [];
+let medicamentos = [];
 
 const fetchData = async (url) => {
 
@@ -12,7 +14,25 @@ const fetchData = async (url) => {
                     productos = data.response;
                 });
     
-    console.table(productos);
+    // console.table(productos);
+
+    productos.map(producto => {
+        if (producto.tipo == 'Juguete') {
+            juguetes.push(producto);
+        } else if (producto.tipo == 'Medicamento') {
+            medicamentos.push(producto);
+        }
+    });
+
+    console.table(juguetes);
+    console.table(medicamentos);
+
+}
+
+const displayCards = () => {
+
+    
+
 }
 
 fetchData(API);
