@@ -1,5 +1,5 @@
 :root{
-  --color1:hsl(174, 98%, 23%);
+  --color1:rgb(1, 116, 105);
   --color2:rgba(23, 180, 83, 0.822);
   --color3:rgba(11,194,211,0.623);
   --fondo:#f2f2f2;
@@ -154,16 +154,16 @@ img{
   }
 
   .textos > h1{
-    font-size: 40px;
+    font-size: var(--titulos);
     margin-top: 10rem;
   }
 
   .textos > h2{
     margin-top: 20px;
-    font-size: 22px; 
-    font-weight: 300;
+    font-size: 30px; 
+    font-weight: bold;
     margin: 3rem 0rem 1rem 0rem;
-    
+    color: var(--color1);
   }
 
   .textos h3 {
@@ -178,8 +178,7 @@ img{
     align-items: center;
     margin-top: 0rem;
     padding: 0;
-    /* border: rgba(23, 180, 83, 0.22) solid 1px; */
-    background-color: rgba(140, 17, 54, 0.22);
+    background-color: rgba(1, 116, 105, 0.466);;
     border-radius: 9px;
     width: 55%;
     height: 40%;
@@ -326,25 +325,18 @@ img{
 
 .textos-work{height: 10%;}
 
-.textos-work h4{
+.textos-work a{
   line-height: 30px;
-  font-weight: 300;
+  font-weight: 700;
+  color: var(--color1);
 }
 
 /*---------------- footer--------------- */
 
-footer{background: url(../img/teclado.jpg);
+footer{
 background-color: var(--color2);
 bottom: 0;
 }
-
-.marca-logo{
-  width: 40%;
-  margin: auto;
-  margin-bottom: var(--espacios);
-}
-
-.marca-logo img{width: 100%;}
 
 .iconos{
 display: flex;
@@ -365,7 +357,7 @@ footer p{margin-top: var(--espacios);}
 /* ------responsive---------- */
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
 
   .nav2{
     color: #fff;
@@ -405,6 +397,31 @@ footer p{margin-top: var(--espacios);}
     width: 48%;
     margin-bottom: var(--margenes);
   }
+  .containerTituloFotos img{
+    flex-direction: row;
+    height: 80px;
+    width: 80px;
+  }
+.containerTituloFotos h2{
+ flex-direction: row;
+  font-size: 20px;
+  max-width: 150px;
+}
+ 
+  .iconos{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: space-between;
+    width: 100%;
+    }
+    
+    .fab{
+      font-size: 60px;
+      color: #fff;
+      margin-bottom: var(--espacios);
+     
+    }
 
   :root{--margenes:30px;}
 }
@@ -432,12 +449,12 @@ footer p{margin-top: var(--espacios);}
 
 /*   Card Index  -- Card Index  Card Index   */
 .card{
-  margin: 20px;
+ margin: 20px;
  width: 200px;
  height: 300px;
  border-radius: 5px;
- background: url(../img/index_2.jpg);
- background-size: cover;
+ background-size: contain;
+ background: var(--i);
  box-shadow: 3px 5px 5px rgba(3,32,51,.8); 
  overflow: hidden;
 }
@@ -464,7 +481,7 @@ footer p{margin-top: var(--espacios);}
   opacity: 1;
 }
 
-.content a{
+.content a {
   color: white;
 }
 
@@ -541,11 +558,12 @@ main{
   height: 100%;
   box-shadow: 3px 15px 10px rgb(75, 69, 69);
   object-fit: cover;
-  margin-bottom: 5vw;
+  margin-bottom: -4vw;
 }
 
 .nombresMascotas{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 14vw;
