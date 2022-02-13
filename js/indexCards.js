@@ -46,10 +46,11 @@ const displayCards = (dataProducto) => {
             <figure class="card-image-container">
                 <img class="card__image" src="${producto.imagen}" alt="producto">
             </figure>
-            <h3>Nombre producto</h3>
-            <p>Precio</p>
-            <p>Cantidad:</p>
-            <input type="number">
+            <h3>${producto.nombre}</h3>
+            <p>$${producto.precio}</p>
+            <label for="">Cantidad:
+                <input type="number" min="1" max="${producto.stock}" value="1">
+            </label>
             <button src="#">Agregar al carrito</button>
         </div>
         `

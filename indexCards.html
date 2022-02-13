@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <button class="btn-carrito">Ver carrito</button>
 
     <div class="product-card-container">
         <div class="card">
@@ -19,9 +20,15 @@
             <h3>Nombre producto</h3>
             <p>Precio</p>
             <p>Cantidad:</p>
-            <input type="number">
+            <label for="">Cantidad:
+                <input type="number" min="1" max="">
+            </label>
             <button src="#">Agregar al carrito</button>
         </div>
+    </div>
+
+    <div class="carrito-cards-container">
+
     </div>
 
     <script src="./js/indexCards.js"></script>
