@@ -94,12 +94,14 @@ img{
     height: 120px;
     color: rgb(255, 255, 255);
     backdrop-filter: blur(10px) brightness(86%);
+    z-index: 2000;
   }
 
   .nav2{
     background:var(--fondo);
     height: 120px;
     color: var(--color1);
+    z-index: 2000;
   } 
 
   .contenedor-nav{
