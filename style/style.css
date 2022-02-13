@@ -94,12 +94,14 @@ img{
     height: 120px;
     color: rgb(255, 255, 255);
     backdrop-filter: blur(10px) brightness(86%);
+    z-index: 2000;
   }
 
   .nav2{
     background:var(--fondo);
     height: 120px;
     color: var(--color1);
+    z-index: 2000;
   } 
 
   .contenedor-nav{
@@ -200,13 +202,35 @@ img{
     text-align: center;
     overflow: hidden;
   }
+
+  .contenedor2{
+    margin:auto;
+    padding-top: var(--margenes);
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+    overflow: hidden;
+  }
+
   .contenedor h3{
     font-size: var(--titulos);
     color: var(--color1);
     margin-bottom: var(--espacios);
   }
 
+  .products-title {
+    margin-bottom: var(--espacios);
+    font-size: var(--titulos);
+    color: var(--color1);
+  }
+
 .contenedor p{
+  font-size: var(--subtitulos);
+  font-weight: 300;
+  color: var(--color1);
+}
+
+.contenedor2 p{
   font-size: var(--subtitulos);
   font-weight: 300;
   color: var(--color1);
@@ -227,7 +251,6 @@ img{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  background: url(../img/fondo.jpg);
 }
 
 .content-card{
@@ -448,8 +471,9 @@ footer p{margin-top: var(--espacios);}
 }
 
 /*   Card Index  -- Card Index  Card Index   */
-.card{
- margin: 20px;
+
+/* .card{
+  margin: 20px;
  width: 200px;
  height: 300px;
  border-radius: 5px;
@@ -483,7 +507,7 @@ footer p{margin-top: var(--espacios);}
 
 .content a {
   color: white;
-}
+} */
 
 /*  DropDown NavBar ---- */
 
@@ -551,6 +575,7 @@ main{
   margin: 0px 0px 30px 0px;
   line-height: 0;
   font-size: 0;
+  overflow: auto;
 }
 
 .imgMascotas{
