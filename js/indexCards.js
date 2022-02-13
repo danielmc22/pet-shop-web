@@ -37,10 +37,10 @@ const fetchData = async (url) => {
         }
     });
 
-    console.table(juguetes);
-    console.table(medicamentos);
+    // console.table(juguetes);
+    // console.table(medicamentos);
 
-    displayCards(productos);
+    displayCards(juguetes);
 
     
 
@@ -61,7 +61,7 @@ const displayCards = (dataProducto) => {
             <h3>${producto.nombre}</h3>
             <p>$${producto.precio}</p>
             <label for="">Cantidad:
-                <input type="number" min="1" max="${producto.stock}">
+                <input type="number" min="1" max="${producto.stock}" value="1">
             </label>
             <button onClick="getID('${producto.id}')" id="${producto.id}" src="#">Agregar al carrito</button>
         </div>
@@ -72,13 +72,13 @@ const displayCards = (dataProducto) => {
     cardsContainer.innerHTML = templateHTML;
 }
 
-function getID(id) {
+function getID(event) {
 
-    let inputCantidad = document.querySelector(`.card.d${id} input`);
+    let inputCantidad = document.querySelector(`.card.d${event} input`);
     let cantidadArticulo = parseInt(inputCantidad.value);
-    console.log(cantidadArticulo);
+    // console.log(cantidadArticulo);
 
-    carritoAll.push(id);
+    carritoAll.push(event);
 
     const carritoUnique = new Set(carritoAll);
     let carritoClear = [...carritoUnique];
@@ -89,17 +89,17 @@ function getID(id) {
 
         if (carritoFinal.some(elemento => elemento.id == productoId)) {
             let productoDesactualizado = carritoFinal.filter(producto => producto.id == productoId);
-            let cantidadAnterior = parseInt(productoDesactualizado.cantidad);
+            let cantidadAnterior = productoDesactualizado[0].cantidad;
 
-            console.log(cantidadAnterior);
-            console.log(cantidadArticulo);
+            console.log(productoDesactualizado);
+            // console.log(cantidadArticulo);
             
             carritoFinal = carritoFinal.filter(producto => producto.id != productoId);
-
             carritoFinal.push({
                 id: productoId,
                 cantidad: parseInt(cantidadArticulo + cantidadAnterior),
             });
+            
         } else {
             carritoFinal.push({
                 id: productoId,
