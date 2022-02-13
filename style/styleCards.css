@@ -21,23 +21,90 @@ body{
 }
 
 .card {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 20px;
     padding: 10px;
-    min-width: 200px;
-    min-height: 350px;
-    width: 200px;
-    height: 300px;
+    min-width: 250px;
+    min-height: 470px;
+    width: 250px;
+    height: 420px;
     border-radius: 5px;
-    background-color: white;
+    background-color: hsl(174, 98%, 23%, 0.8);
     box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.452); 
     overflow: hidden;
+    color: white;
+}
+
+.card span {
+    position: absolute;
+    display: inline-block;
+    padding: 8px;
+    top: 20px;
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+    border-radius: 100px;
+    background-color: red;
+    right: 20px;
+}
+
+.card label {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    width: 80%;
+    font-weight: 500;
+}
+
+.card p {
+    margin-top: 10px;
+}
+
+.card button {
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 100px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.card button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: hsl(174, 98%, 23%);
+    border: 2px solid hsl(174, 98%, 15%);
+    transition: 0.3s;
+}
+
+.card input {
+    margin-left: 10px;
+    text-align: center;
+    max-width: 30px;
+    width: 30px;
+    height: 30px;
+    border-style: none;
+    border-radius: 3px;
+    background-color: hsl(174, 98%, 23%, 0.9);
+    color: white;
+    font-weight: 700;
+    outline: none;
 }
 
 .card h3 {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    height: 45px;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: white;
 }
 
 .card-image-container {

@@ -6,6 +6,8 @@ let juguetes = [];
 let medicamentos = [];
 
 const cardsContainer = document.querySelector('.product-card-container');
+const productsTitle = document.querySelector('.products-title').textContent;
+console.log(productsTitle);
 
 //* Carrito
 let carritoAll = [];
@@ -40,7 +42,11 @@ const fetchData = async (url) => {
     // console.table(juguetes);
     // console.table(medicamentos);
 
-    displayCards(juguetes);
+    if (productsTitle == 'Juguetes') {
+        displayCards(juguetes);
+    } else if (productsTitle == 'Farmacia') {
+        displayCards(medicamentos);
+    }
 
     
 
@@ -52,24 +58,54 @@ const displayCards = (dataProducto) => {
 
     dataProducto.map(producto => {
 
+        if (producto.stock > 5) {
+            templateHTML += `
+            <div class="card d${producto.id}">
+                <figure class="card-image-container">
+                    <img class="card__image" src="${producto.imagen}" alt="producto">
+                </figure>
+                <h3>${producto.nombre}</h3>
+                <p>$${producto.precio}</p>
+                <label for="">Cantidad:
+                    <input type="number" min="1" max="${producto.stock}" value="1">
+                </label>
+                <button onClick="getID('${producto.id}')" id="${producto.id}" src="#">Agregar al carrito</button>
+            </div>
+            `
+        } else {
+            templateHTML += `
+            <div class="card d${producto.id}">
+            <span>¡Ultimas Unidades!</span>
+                <figure class="card-image-container">
+                    <img class="card__image" src="${producto.imagen}" alt="producto">
+                </figure>
+                <h3>${producto.nombre}</h3>
+                <p>$${producto.precio}</p>
+                <label for="">Cantidad:
+                    <input type="number" min="1" max="${producto.stock}" value="1">
+                </label>
+                <button onClick="getID('${producto.id}')" id="${producto.id}" src="#">Agregar al carrito</button>
+            </div>
+            `
+        }
 
-        templateHTML += `
-        <div class="card d${producto.id}">
-            <figure class="card-image-container">
-                <img class="card__image" src="${producto.imagen}" alt="producto">
-            </figure>
-            <h3>${producto.nombre}</h3>
-            <p>$${producto.precio}</p>
-            <label for="">Cantidad:
-                <input type="number" min="1" max="${producto.stock}" value="1">
-            </label>
-            <button onClick="getID('${producto.id}')" id="${producto.id}" src="#">Agregar al carrito</button>
-        </div>
-        `
+
+        
 
     });
 
+
+
     cardsContainer.innerHTML = templateHTML;
+
+    const span = document.createElement('span');
+
+
+    // const ultimosProductosNodeList = document.querySelectorAll('input[type="number"]');
+    // const ultimosProductos = [...ultimosProductosNodeList];
+    // console.log(ultimosProductos);
+
+
 }
 
 function getID(event) {
