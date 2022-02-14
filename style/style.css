@@ -154,11 +154,12 @@ img{
     overflow: hidden;
     text-align: center;
     padding-top: 7rem;
+    font-family: 'Roboto', sans-serif;
   }
 
   .textos > h1{
     font-size: var(--titulos);
-    margin-top: 10rem;
+    /* margin-top: 10rem; */
   }
 
   .textos > h2{
@@ -180,12 +181,18 @@ img{
     justify-content: space-evenly;
     align-items: center;
     margin-top: 0rem;
+    margin-bottom: 20px;
     padding: 0;
     background-color: rgba(1, 116, 105, 0.466);;
     border-radius: 9px;
-    width: 55%;
-    height: 40%;
+    width: 70%;
+    min-height: 200px;
     transition: all 0.3s;
+    max-width: 900px;
+  }
+
+  .containerHistory a {
+    text-decoration: underline;
   }
 
   .containerHistory:hover{
@@ -330,6 +337,7 @@ img{
 .galeria-work .cont-work{
   width: 31%;
   min-width: 250px;
+  border-radius: 5px;
   box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
   height: 300px;
   overflow: hidden;
@@ -337,8 +345,9 @@ img{
 }
 
 .img-work{
-  height: 90%;
+  height: 80%;
   width: 100%;
+  overflow: hidden;
 }
 
 .img-work img{
@@ -347,12 +356,37 @@ img{
   object-fit: cover;
 }
 
-.textos-work{height: 10%;}
+.textos-work{
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  height: 20%;
+  background-color: hsl(174, 98%, 23%, 0.8);
+  align-items: center;
+  justify-content: center;
+}
 
 .textos-work a{
-  line-height: 30px;
+  /* line-height: 30px; */
   font-weight: 700;
   color: var(--color1);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: white;
+}
+
+.textos .producto-h1 {
+  font-size: 60px;
+  font-weight: 700;
+  width: 100%;
+}
+
+.textos .producto-h2 {
+  margin-top: 30px;
+  color: white;
+  font-weight: 500;
+  font-size: 24px;
 }
 
 /*---------------- footer--------------- */
@@ -383,6 +417,26 @@ footer p{margin-top: var(--espacios);}
 
 @media screen and (max-width: 750px) {
 
+  .textos .producto-h1 {
+    font-size: 40px;
+  }
+
+  .imgMascotas.mobile {
+    display: none;
+  }
+
+  .imgMascotas {
+    width: 25%;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+
+  .dropdown-content .btn-header {
+    color: white;
+  }
+
   .nav2{
     color: #fff;
   }
@@ -393,7 +447,7 @@ footer p{margin-top: var(--espacios);}
   .enlaces{
     text-align: center;
     position: fixed;
-    top: 80px;
+    top: 120px;
     background: #2c3e50;
     left: 0;
     height: 100vh;
@@ -413,7 +467,7 @@ footer p{margin-top: var(--espacios);}
     /* margin: 0px 10px; */
   }
 
-  .textos>h1{font-size: 70px;}
+  .textos>h1{font-size: var(--titulos);}
 
   .textos>h2{font-size: 35px;}
 
@@ -456,6 +510,7 @@ footer p{margin-top: var(--espacios);}
 @media screen and (max-width:500px){
    
   :root{--espacios-contenidos:25px;}
+
 
   .content-card{width: 90%;}
 
@@ -527,6 +582,8 @@ footer p{margin-top: var(--espacios);}
 .dropdown {
   position: relative;
   display: inline-block;
+  /* width: 100%; */
+  text-align: center;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -538,6 +595,10 @@ footer p{margin-top: var(--espacios);}
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
+
+/* .dropdown-content .btn-header {
+  width: 100%;
+} */
 
 /* Links inside the dropdown */
 .dropdown-content a {
@@ -571,30 +632,50 @@ main{
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 30vh;
+  height: 300px;
   font-size: 0;
-  margin: 0px 0px 30px 0px;
   line-height: 0;
   font-size: 0;
-  overflow: auto;
 }
 
 .imgMascotas{
-  width: 100vw;
+  flex-grow: 1;
+  width: 20%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imgMascotas figure {
+  width: 100%;
+  height: 80%;
+  overflow: hidden;
+}
+
+.imgMascotas img {
+  width: 100%;
   height: 100%;
-  box-shadow: 3px 15px 10px rgb(75, 69, 69);
   object-fit: cover;
-  margin-bottom: -4vw;
+  object-position: center;
+}
+
+.imgMascotas h3 {
 }
 
 .nombresMascotas{
+  text-align: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 14vw;
-  height: 1vh;
+  height: 1.2em;
   margin-top: 1.3vw;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  -webkit-text-stroke: 1px black;
 }
 .txt h3{
   font-size: 14px;
@@ -622,6 +703,8 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  width: 100%;
   height: 2.5rem;
   margin-bottom: 3rem;
 }
