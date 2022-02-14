@@ -17,7 +17,7 @@ function menus(){
         nav.classList.remove("nav1");
         nav.className=("nav2");
         nav.style.transition ="1s";
-        menu.style.top ="100px"
+        menu.style.top ="120px"
         abrir.style.color="#000"; 
     }
 }

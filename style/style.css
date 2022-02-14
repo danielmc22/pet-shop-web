@@ -393,7 +393,7 @@ footer p{margin-top: var(--espacios);}
   .enlaces{
     text-align: center;
     position: fixed;
-    top: 80px;
+    top: 120px;
     background: #2c3e50;
     left: 0;
     height: 100vh;
@@ -527,6 +527,7 @@ footer p{margin-top: var(--espacios);}
 .dropdown {
   position: relative;
   display: inline-block;
+  width: 100%;
 }
 
 /* Dropdown Content (Hidden by Default) */

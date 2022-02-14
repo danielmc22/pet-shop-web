@@ -541,7 +541,7 @@ footer p{margin-top: var(--espacios);}
     text-align: center;
     background: #34495e;
     color: #fff;
-    margin: 0px 10px;
+    /* margin: 0px 10px; */
   }
 
   .textos>h1{font-size: 70px;}
@@ -633,6 +633,7 @@ footer p{margin-top: var(--espacios);}
 .dropbtn {
   background-color: rgba(11, 194, 211, 0);
   padding: 16px;
+  width: 100%;
   font-size: 16px;
   border: none;
   cursor: pointer;
