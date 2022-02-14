@@ -51,7 +51,7 @@ window.addEventListener("click", function(e){
 })
 
 window.addEventListener("scroll",function(){
-    console.log(window.pageYOffset);
+    // console.log(window.pageYOffset);
     menus()
 })
 

@@ -309,7 +309,7 @@ img{
 
 /*---------------- footer--------------- */
 
-footer{background: url(../img/teclado.jpg);
+footer{
 background-color: var(--color2);
 bottom: 0;
 }
@@ -446,7 +446,7 @@ footer p{margin-top: var(--espacios);}
 .formulario__btn:hover{
   box-shadow: 3px 0px 30px rgba(163,163,163,1);
 } 
- 
+
 .formulario__mensaje-exito{
   font-size: 14px;
   color:#119200;
@@ -595,7 +595,7 @@ footer p{margin-top: var(--espacios);}
  width: 200px;
  height: 300px;
  border-radius: 5px;
- background: url(../img/index_2.jpg);
+ background: var(--i);
  background-size: cover;
  box-shadow: 3px 5px 5px rgba(3,32,51,.8); 
  overflow: hidden;
