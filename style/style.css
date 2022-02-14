@@ -154,11 +154,12 @@ img{
     overflow: hidden;
     text-align: center;
     padding-top: 7rem;
+    font-family: 'Roboto', sans-serif;
   }
 
   .textos > h1{
     font-size: var(--titulos);
-    margin-top: 10rem;
+    /* margin-top: 10rem; */
   }
 
   .textos > h2{
@@ -369,7 +370,16 @@ img{
   padding: 0;
   border: 0;
   color: white;
-  
+}
+
+.textos .producto-h1 {
+  font-size: 60px;
+  margin-top: 60px;
+  font-weight: 700;
+}
+
+.textos .producto-h2 {
+  margin-top: 30px;
 }
 
 /*---------------- footer--------------- */
@@ -434,7 +444,7 @@ footer p{margin-top: var(--espacios);}
     /* margin: 0px 10px; */
   }
 
-  .textos>h1{font-size: 50px;}
+  .textos>h1{font-size: var(--titulos);}
 
   .textos>h2{font-size: 35px;}
 
