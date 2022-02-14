@@ -7,20 +7,16 @@
     <title>Franco Pet Shop</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/styleContacto.css">
-    <link rel="icon" href="./img/icon.png">
     <link rel="stylesheet" href="./style/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300&display=swap" rel="stylesheet">
-
+    <link rel="icon" href="./img/icon.png">
 </head>
 <body class="hidden">
     <div class="cerrado" id="onload">
         <div class="lds-facebook"><div></div><div></div></div>
     </div>
-    <header>
+    <header class="headerMenosSize">
 
         <nav id="nav" class="nav1">
 
@@ -49,11 +45,15 @@
         </nav>
 
         <div class="textos">
-            <h1>REGISTRO</h1>
-            <h2> Registrate en nuestra página y participa en los sorteos mensuales de productos para tu mascota</h2>
+            <h1 class="producto-h1">CONTACTANOS</h1>
         </div>
     </header>
     <main>
+        <div class="contenedor2">
+            <h3 class="products-title">Contacto</h3>
+            <p class="products-description after">Registrate en nuestra página y participa en los sorteos mensuales de productos para tu mascota</p>
+        </div>
+        
 
         <section class="main">
 
@@ -132,13 +132,13 @@
           </div>
 
           <div class="formulario__grupo formulario__grupo-btn-enviar">
-            <button type="submit" class="formulario__btn">Enviar</button>
-            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+              <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+            <button type="button" class="formulario__btn">Enviar</button>
           </div>
 
           <div class="formulario__grupo formulario__grupo-btn-enviar">
             
-            <button type="submit"  class="formulario__btn "><a href="#miModal" >Ubicación</a></button>
+            <button type="submit"  class="formulario__btn"><a href="#miModal" >Ubicación</a></button>
             <div id="miModal" class="modal">
               <div class="modal-contenido">
                 <a href="#" style="color:white">X</a>
