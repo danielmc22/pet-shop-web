@@ -180,12 +180,14 @@ img{
     justify-content: space-evenly;
     align-items: center;
     margin-top: 0rem;
+    margin-bottom: 20px;
     padding: 0;
     background-color: rgba(1, 116, 105, 0.466);;
     border-radius: 9px;
-    width: 55%;
-    height: 40%;
+    width: 70%;
+    min-height: 200px;
     transition: all 0.3s;
+    max-width: 900px;
   }
 
   .containerHistory:hover{
@@ -330,6 +332,7 @@ img{
 .galeria-work .cont-work{
   width: 31%;
   min-width: 250px;
+  border-radius: 5px;
   box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
   height: 300px;
   overflow: hidden;
@@ -337,8 +340,9 @@ img{
 }
 
 .img-work{
-  height: 90%;
+  height: 80%;
   width: 100%;
+  overflow: hidden;
 }
 
 .img-work img{
@@ -347,12 +351,25 @@ img{
   object-fit: cover;
 }
 
-.textos-work{height: 10%;}
+.textos-work{
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  height: 20%;
+  background-color: hsl(174, 98%, 23%, 0.8);
+  align-items: center;
+  justify-content: center;
+}
 
 .textos-work a{
-  line-height: 30px;
+  /* line-height: 30px; */
   font-weight: 700;
   color: var(--color1);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: white;
+  
 }
 
 /*---------------- footer--------------- */
@@ -382,6 +399,10 @@ footer p{margin-top: var(--espacios);}
 
 
 @media screen and (max-width: 750px) {
+
+  .dropdown {
+    width: 100%;
+  }
 
   .nav2{
     color: #fff;
@@ -413,7 +434,7 @@ footer p{margin-top: var(--espacios);}
     /* margin: 0px 10px; */
   }
 
-  .textos>h1{font-size: 70px;}
+  .textos>h1{font-size: 50px;}
 
   .textos>h2{font-size: 35px;}
 
@@ -456,6 +477,14 @@ footer p{margin-top: var(--espacios);}
 @media screen and (max-width:500px){
    
   :root{--espacios-contenidos:25px;}
+
+  .imgMascotas.mobile {
+    display: none;
+  }
+
+  .imgMascotas {
+    width: 25%;
+  }
 
   .content-card{width: 90%;}
 
@@ -527,7 +556,7 @@ footer p{margin-top: var(--espacios);}
 .dropdown {
   position: relative;
   display: inline-block;
-  width: 100%;
+  /* width: 100%; */
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -572,20 +601,31 @@ main{
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 30vh;
+  height: 300px;
   font-size: 0;
-  margin: 0px 0px 30px 0px;
   line-height: 0;
   font-size: 0;
-  overflow: auto;
 }
 
 .imgMascotas{
-  width: 100vw;
-  height: 100%;
-  box-shadow: 3px 15px 10px rgb(75, 69, 69);
-  object-fit: cover;
+  width: 20%;
+  height: 200px;
   margin-bottom: -4vw;
+}
+
+.imgMascotas figure {
+  width: 100%;
+  height: 80%;
+  overflow: hidden;
+}
+
+.imgMascotas img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.imgMascotas h3 {
+  background-color: red;
 }
 
 .nombresMascotas{
