@@ -11,10 +11,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/carousel.css">
     <link rel="icon" href="./img/icon.png">
     
-
 </head>
 
 <body class="hidden">
@@ -53,20 +54,40 @@
         </nav>
 
         <div class="textos descripcion">
-            <h1> ◖ BIENVENIDOS A NUESTRA TIENDA PARA MASCOTAS ◗</h1>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="./img/mascotas3.jpg" class="img-carousel" alt="img de mascota"></div>
+                  <div class="swiper-slide"><img src="./img/mascotas4.jpg" alt="img de mascota"></div>
+                  <div class="swiper-slide"><img src="./img/mascotas5.jpg" alt="img de mascota"></div>
+                  <div class="swiper-slide"><img src="./img/mascotas2.jpg" alt="img de mascota"></div>
+                  <div class="swiper-slide"><img src="./img/mascotas7.jpg" alt="img de mascota"></div>
+
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <h3> TU MASCOTA ES NUESTRA PASIÓN !</h3>
+
+              <div class="lista-header">
+                  <p>Medicamentos</p>
+                  <p>Juguetes</´p>
+                  <p>Médico Veterinario</>
+                  <p>Y mucho más</p>
+              </div>
+
         </div>
+
     </header>
+
     <main>
 
-    <div class="textos descripcion">
-
-    
+    <div class="sobre-nosotros">
         <h2>Sobre nosotros</h2>
         <div class="containerHistory">
             <h3>Franco Pet Shop debe su nombre a un hermoso Schnauzer que hizo parte de nuestra familia durante 14 años. Gracias a él nació nuestro amor y pasión
                 por los animales. Visitanos y aprovecha nuestros excelentes precios y productos.<a href="./Contacto.html">Estamos ubicados en Rio de Janeiro 300 CABA, Arg.</a></h3>
         </div>
-
     </div>    
 
 
@@ -74,17 +95,13 @@
             <h3>Productos mas vendidos</h3>
             <p class="after">Consigue el tuyo antes de que se agoten</p>
 
-
-
             <section class="work contenedor" id="trabajo">
             
-
                 <div class="botones-work">
                     <ul>
                         <li class="filter" data-nombre="todos">Todos</li>
                         <li class="filter" data-nombre="diseño">Farmacia</li>
                         <li class="filter" data-nombre="programacion">Juguetes</li>
-                        
                     </ul>
                 </div>
     
@@ -224,6 +241,8 @@
     <script src="./js/jquery.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/filtro.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/carousel.js"></script>
 </body>
 
 </html>
